@@ -12,8 +12,8 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "typecheck": "tsc --noEmit",
-    "test": "jest --watch",
-    "test:run": "jest"
+    "test": "jest --watch --passWithNoTests",
+    "test:run": "jest --passWithNoTests"
   },
   "dependencies": {
     "@convex-dev/auth": "^0.0.90",
