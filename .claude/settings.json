@@ -2,8 +2,5 @@
   "project": {
     "name": "vibe-universal",
     "description": "Universal React monorepo with Next.js, Expo, and Convex"
-  },
-  "model": {
-    "preferred": "claude-sonnet-4-20250514"
   }
 }
