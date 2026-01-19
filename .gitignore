@@ -13,11 +13,18 @@ android/
 # Turbo
 .turbo/
 
-# Environment
+# Environment - local files (not committed)
 .env
 .env.local
 .env.production
 .env.*.local
+
+# Convex env files (pulled from Convex, contain secrets)
+.env.convex.development
+.env.convex.production
+.env.convex.preview
+.env.convex-cli.production
+.env.convex-cli.preview
 
 # IDE
 .idea/

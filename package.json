@@ -30,7 +30,19 @@
     "test:run": "turbo test:run",
     "typecheck": "turbo typecheck",
     "clean": "turbo clean && rm -rf node_modules",
-    "prepare": "husky"
+    "prepare": "husky",
+    "env:pull:vercel": "pnpm env:pull:vercel:development && pnpm env:pull:vercel:preview && pnpm env:pull:vercel:production",
+    "env:pull:vercel:development": "vercel env pull .env.development.local --environment development",
+    "env:pull:vercel:preview": "vercel env pull .env.preview.local --environment preview",
+    "env:pull:vercel:production": "vercel env pull .env.production.local --environment production",
+    "env:pull:convex": "./scripts/convex/env-pull.sh all",
+    "env:pull:convex:development": "./scripts/convex/env-pull.sh development",
+    "env:pull:convex:preview": "./scripts/convex/env-pull.sh preview",
+    "env:pull:convex:production": "./scripts/convex/env-pull.sh production",
+    "env:push:convex:development": "./scripts/convex/env-push.sh development",
+    "env:push:convex:preview": "./scripts/convex/env-push.sh preview",
+    "env:push:convex:production": "./scripts/convex/env-push.sh production",
+    "env:verify:convex": "./scripts/convex/env-verify.sh"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.6.1",
